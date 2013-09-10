@@ -1,0 +1,37 @@
+<html>
+<head>
+  <title>Javascript Bare</title>
+</head>
+<body>
+
+<script type="text/javascript">
+  var yell = function (name, str){
+  	return name + ": " + str.toUpperCase() + "!";
+  };
+
+
+  var ask = function (name, str){
+  	return name + ": Can you please " + str + "?";
+  };
+
+
+  var serveMessage = function (name,str,fxn){
+  	return fxn(name,str);
+  };
+
+
+
+  console.log(serveMessage("Nick", "go home", ask));
+  console.log(serveMessage("Nick", "go home", yell));
+
+  console.log(serveMessage("Nick", "go home", function(name, str){
+  	return name + ": Can you please " + str + "?";
+  }));
+
+   console.log(serveMessage("Nick", "go home", function(name, str){
+  	return name + ": " + str.toUpperCase() + "!";
+  }));
+</script>
+
+</body>
+</html>
